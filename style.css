@@ -40,19 +40,42 @@ nav{
   font-size: 1.5rem;
 }
 
+li{
+  position: relative;
+}
+
 a {
   color: black;
   text-decoration: none;
   text-decoration-color: white ;
+  text-transform: uppercase;
+  position: relative;
 }
 
 a:hover{
-  color: gray;
-  text-decoration: underline;
-  text-underline-offset: 0.5rem;
-  text-decoration-color: rgb(181, 181, 181);
-  transition: 700ms;
+  color:rgb(181,181,181);
+
 }
+
+a:hover::before{
+  text-decoration-color: rgb(181, 181, 181);
+  transition: 250ms ease-in-out;
+  width: 100%;
+
+}
+
+a::before{
+  content:'';
+  display:block;
+  height: 5px;
+  width: 100%;
+  background-color:rgb(181,181,181);
+  position: absolute;
+  top:1;
+  width: 0;
+  transition: all ease-in-out 250ms;
+}
+
 
 .Logo {
   font-size: 2rem;
@@ -164,7 +187,7 @@ section {
   align-items: center;
   height: 110%;
   width: auto;
-  transition: 1000ms;
+  transition: 1000ms ease-in-out;
 }
 .section__pic-container{
   display: flex;
@@ -200,7 +223,7 @@ section {
 
 .icon{
   cursor:pointer;
-  height: 2rem;
+  height: 4rem;
 }
 
 .btn_container{
@@ -229,6 +252,7 @@ section {
 .btn-color-1:hover, 
 .btn-color-2:hover{
   cursor:pointer;
+  transition: 500ms ease-in-out;
 }
 .btn-color-1:hover,
 .btn-color-2:hover{
@@ -254,10 +278,15 @@ section {
 #about {
   position: relative;
 }
+
+.text-container{
+  font-size: 1.25rem;
+}
 .about-containers{
   gap:2rem;
   margin-bottom: 1rem;
   margin-top: 1rem;
+ 
 }
 .about-details-container{
   justify-content: center;
@@ -267,11 +296,12 @@ section {
   display: flex;
 }
 .about-pic{
-  border-radius: 2rem;
+  border-radius: 4rem;
   align-items: center;
   height:100%;
   width: auto; 
   transition: 1000ms;
+  padding-left: 2rem;
 
 }
 .about-pic:hover{
@@ -313,10 +343,14 @@ section {
 /* Experience*/ 
 
 .title-2{
-  font-size: 50rem;
+  font-size: 200rem;
   text-align: center;
   color: #e8f9fd;
   
+}
+
+.section__text__p1{
+  font-size: 3rem;
 }
 
 #experience{
@@ -422,7 +456,7 @@ article .icon{
 }
 
 .email-icon{
-  height: 2.5rem;
+  height: 5rem;
 }
 
 /* Footer*/
@@ -431,5 +465,9 @@ footer{
   margin:0 1rem
 }
 footer p{
+  align: center;
+}
+
+.about-text{
   text-align: center;
 }
