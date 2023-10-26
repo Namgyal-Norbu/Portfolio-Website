@@ -403,8 +403,8 @@ article .icon{
 }
 .project-img{
   width: 90%;
-  height: 28rem;
-  border-radius: 7%;
+  height: 22rem;
+  border-radius: 30px;
   align-items: center;
   padding-left: 40px;
   
@@ -430,6 +430,7 @@ article .icon{
   display:flex;
   justify-content: center;
   flex-direction: column;
+  position: relative;
   height: 70vh;
   margin-top: 4.5rem;
 }
